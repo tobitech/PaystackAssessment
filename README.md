@@ -17,7 +17,7 @@ TWO-screen application with an API of your choice. It needs to have a list and a
 If you need an idea for an API but please use your own if you want: https://rickandmortyapi.com/documentation
 
 What we would like you to demonstrate:
-- Build a screen with SwiftUI and build one component in UIKit and bridge it to SwiftUI. This is any component of your chosing)
+- Build a screen with SwiftUI and build one component in UIKit and bridge it to SwiftUI. (This is any component of your chosing)
 - Build a basic CI that clean and builds the application on Github actions
 - Demonstrate your ability to write Tests. (write at least 1 Test for any logic layer)
 - Create at at least 1 module/pod/package for some piece of code and integrate it into the app.
