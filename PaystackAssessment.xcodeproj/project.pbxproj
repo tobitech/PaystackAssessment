@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		0A729E992BD286A500E7434B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A729E982BD286A500E7434B /* RootView.swift */; };
 		0A729E9B2BD286A600E7434B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A729E9A2BD286A600E7434B /* Assets.xcassets */; };
 		0A729E9E2BD286A600E7434B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A729E9D2BD286A600E7434B /* Preview Assets.xcassets */; };
+		0A9232192BD40684008B5F24 /* APIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 0A9232182BD40684008B5F24 /* APIClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A9232192BD40684008B5F24 /* APIClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = PaystackAssessment;
+			packageProductDependencies = (
+				0A9232182BD40684008B5F24 /* APIClient */,
+			);
 			productName = PaystackAssessment;
 			productReference = 0A729E932BD286A500E7434B /* PaystackAssessment.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 0A729E8A2BD286A500E7434B;
+			packageReferences = (
+				0A9232172BD40684008B5F24 /* XCLocalSwiftPackageReference "APIClient" */,
+			);
 			productRefGroup = 0A729E942BD286A500E7434B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -344,6 +352,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		0A9232172BD40684008B5F24 /* XCLocalSwiftPackageReference "APIClient" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = APIClient;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0A9232182BD40684008B5F24 /* APIClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = APIClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0A729E8B2BD286A500E7434B /* Project object */;
 }
