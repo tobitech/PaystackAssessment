@@ -7,28 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5225EE2BD459EF00CE81FE /* HTTPClient in Resources */ = {isa = PBXBuildFile; fileRef = 0A5225ED2BD459EF00CE81FE /* HTTPClient */; };
+		0A5225F12BD45A0E00CE81FE /* HTTPClient in Frameworks */ = {isa = PBXBuildFile; productRef = 0A5225F02BD45A0E00CE81FE /* HTTPClient */; };
 		0A729E972BD286A500E7434B /* PaystackAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A729E962BD286A500E7434B /* PaystackAssessmentApp.swift */; };
 		0A729E992BD286A500E7434B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A729E982BD286A500E7434B /* RootView.swift */; };
 		0A729E9B2BD286A600E7434B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A729E9A2BD286A600E7434B /* Assets.xcassets */; };
 		0A729E9E2BD286A600E7434B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A729E9D2BD286A600E7434B /* Preview Assets.xcassets */; };
-		0A9232192BD40684008B5F24 /* APIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 0A9232182BD40684008B5F24 /* APIClient */; };
 		0A92321C2BD40748008B5F24 /* CharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A92321B2BD40748008B5F24 /* CharactersModel.swift */; };
 		0A92322A2BD40AB6008B5F24 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9232292BD40AB6008B5F24 /* CharactersView.swift */; };
 		0A92322D2BD40B6B008B5F24 /* CharacterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A92322C2BD40B6B008B5F24 /* CharacterData.swift */; };
 		0A9232302BD40ED0008B5F24 /* CharacterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A92322F2BD40ED0008B5F24 /* CharacterDetailsView.swift */; };
+		0AA5FBC92BD451EA006A3962 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5FBC82BD451EA006A3962 /* APIService.swift */; };
+		0AA5FBCB2BD451F0006A3962 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5FBCA2BD451F0006A3962 /* Endpoints.swift */; };
+		0AA5FBCD2BD45669006A3962 /* CharactersAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5FBCC2BD45669006A3962 /* CharactersAPIResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A5225ED2BD459EF00CE81FE /* HTTPClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HTTPClient; sourceTree = "<group>"; };
 		0A729E932BD286A500E7434B /* PaystackAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaystackAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A729E962BD286A500E7434B /* PaystackAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaystackAssessmentApp.swift; sourceTree = "<group>"; };
 		0A729E982BD286A500E7434B /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		0A729E9A2BD286A600E7434B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A729E9D2BD286A600E7434B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0A92321B2BD40748008B5F24 /* CharactersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersModel.swift; sourceTree = "<group>"; };
-		0A9232282BD40958008B5F24 /* APIClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = APIClient; sourceTree = "<group>"; };
 		0A9232292BD40AB6008B5F24 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 		0A92322C2BD40B6B008B5F24 /* CharacterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterData.swift; sourceTree = "<group>"; };
 		0A92322F2BD40ED0008B5F24 /* CharacterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsView.swift; sourceTree = "<group>"; };
+		0AA5FBC82BD451EA006A3962 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		0AA5FBCA2BD451F0006A3962 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		0AA5FBCC2BD45669006A3962 /* CharactersAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersAPIResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,19 +43,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A9232192BD40684008B5F24 /* APIClient in Frameworks */,
+				0A5225F12BD45A0E00CE81FE /* HTTPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A5225EF2BD45A0E00CE81FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0A729E8A2BD286A500E7434B = {
 			isa = PBXGroup;
 			children = (
-				0A9232282BD40958008B5F24 /* APIClient */,
+				0A5225ED2BD459EF00CE81FE /* HTTPClient */,
 				0A729E952BD286A500E7434B /* PaystackAssessment */,
 				0A729E942BD286A500E7434B /* Products */,
+				0A5225EF2BD45A0E00CE81FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +78,7 @@
 		0A729E952BD286A500E7434B /* PaystackAssessment */ = {
 			isa = PBXGroup;
 			children = (
+				0AA5FBC72BD451D4006A3962 /* NetworkService */,
 				0A92322E2BD40EB8008B5F24 /* CharacterDetails */,
 				0A92322B2BD40B5B008B5F24 /* Models */,
 				0A92321A2BD4072D008B5F24 /* Characters */,
@@ -95,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				0A92322C2BD40B6B008B5F24 /* CharacterData.swift */,
+				0AA5FBCC2BD45669006A3962 /* CharactersAPIResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -105,6 +122,15 @@
 				0A92322F2BD40ED0008B5F24 /* CharacterDetailsView.swift */,
 			);
 			path = CharacterDetails;
+			sourceTree = "<group>";
+		};
+		0AA5FBC72BD451D4006A3962 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				0AA5FBCA2BD451F0006A3962 /* Endpoints.swift */,
+				0AA5FBC82BD451EA006A3962 /* APIService.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +150,7 @@
 			);
 			name = PaystackAssessment;
 			packageProductDependencies = (
-				0A9232182BD40684008B5F24 /* APIClient */,
+				0A5225F02BD45A0E00CE81FE /* HTTPClient */,
 			);
 			productName = PaystackAssessment;
 			productReference = 0A729E932BD286A500E7434B /* PaystackAssessment.app */;
@@ -172,6 +198,7 @@
 			files = (
 				0A729E9E2BD286A600E7434B /* Preview Assets.xcassets in Resources */,
 				0A729E9B2BD286A600E7434B /* Assets.xcassets in Resources */,
+				0A5225EE2BD459EF00CE81FE /* HTTPClient in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,11 +210,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A92321C2BD40748008B5F24 /* CharactersModel.swift in Sources */,
+				0AA5FBCB2BD451F0006A3962 /* Endpoints.swift in Sources */,
 				0A729E992BD286A500E7434B /* RootView.swift in Sources */,
 				0A92322D2BD40B6B008B5F24 /* CharacterData.swift in Sources */,
+				0AA5FBC92BD451EA006A3962 /* APIService.swift in Sources */,
 				0A92322A2BD40AB6008B5F24 /* CharactersView.swift in Sources */,
 				0A729E972BD286A500E7434B /* PaystackAssessmentApp.swift in Sources */,
 				0A9232302BD40ED0008B5F24 /* CharacterDetailsView.swift in Sources */,
+				0AA5FBCD2BD45669006A3962 /* CharactersAPIResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,9 +425,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0A9232182BD40684008B5F24 /* APIClient */ = {
+		0A5225F02BD45A0E00CE81FE /* HTTPClient */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = APIClient;
+			productName = HTTPClient;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

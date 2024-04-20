@@ -4,19 +4,19 @@
 import PackageDescription
 
 let package = Package(
-	name: "APIClient",
+	name: "HTTPClient",
 	platforms: [.iOS(.v17)],
 	products: [
-		.library(name: "APIClient", targets: ["APIClient"]),
+		.library(name: "HTTPClient", targets: ["HTTPClient"]),
 	],
 	dependencies: [],
 	targets: [
 		.target(
-			name: "APIClient"
+			name: "HTTPClient"
 		),
 		.testTarget(
-			name: "APIClientTests",
-			dependencies: ["APIClient"]
+			name: "HTTPClientTests",
+			dependencies: ["HTTPClient"]
 		),
 	]
 )

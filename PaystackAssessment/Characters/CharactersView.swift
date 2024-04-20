@@ -20,6 +20,9 @@ struct CharactersView: View {
 			}
 			.scrollIndicators(.hidden)
 			.navigationTitle("Characters")
+			.task {
+				await model.getCharacters()
+			}
 		}
 	}
 	
@@ -48,5 +51,5 @@ struct CharactersView: View {
 }
 
 #Preview {
-	CharactersView(model: CharactersModel())
+	CharactersView(model: CharactersModel(apiService: MockAPIService()))
 }
