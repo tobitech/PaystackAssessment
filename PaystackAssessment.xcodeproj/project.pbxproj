@@ -11,6 +11,7 @@
 		0A5225F12BD45A0E00CE81FE /* HTTPClient in Frameworks */ = {isa = PBXBuildFile; productRef = 0A5225F02BD45A0E00CE81FE /* HTTPClient */; };
 		0A5225F42BD45D5100CE81FE /* CacheImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5225F32BD45D5100CE81FE /* CacheImageView.swift */; };
 		0A5225F62BD463C000CE81FE /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5225F52BD463C000CE81FE /* URLImage.swift */; };
+		0A5226002BD47F2A00CE81FE /* PaystackAssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5225FF2BD47F2A00CE81FE /* PaystackAssessmentTests.swift */; };
 		0A729E972BD286A500E7434B /* PaystackAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A729E962BD286A500E7434B /* PaystackAssessmentApp.swift */; };
 		0A729E992BD286A500E7434B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A729E982BD286A500E7434B /* RootView.swift */; };
 		0A729E9B2BD286A600E7434B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A729E9A2BD286A600E7434B /* Assets.xcassets */; };
@@ -24,10 +25,22 @@
 		0AA5FBCD2BD45669006A3962 /* CharactersAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5FBCC2BD45669006A3962 /* CharactersAPIResponse.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0A5226012BD47F2A00CE81FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A729E8B2BD286A500E7434B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A729E922BD286A500E7434B;
+			remoteInfo = PaystackAssessment;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0A5225ED2BD459EF00CE81FE /* HTTPClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HTTPClient; sourceTree = "<group>"; };
 		0A5225F32BD45D5100CE81FE /* CacheImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImageView.swift; sourceTree = "<group>"; };
 		0A5225F52BD463C000CE81FE /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		0A5225FD2BD47F2A00CE81FE /* PaystackAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaystackAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A5225FF2BD47F2A00CE81FE /* PaystackAssessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaystackAssessmentTests.swift; sourceTree = "<group>"; };
 		0A729E932BD286A500E7434B /* PaystackAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaystackAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A729E962BD286A500E7434B /* PaystackAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaystackAssessmentApp.swift; sourceTree = "<group>"; };
 		0A729E982BD286A500E7434B /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -43,6 +56,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0A5225FA2BD47F2A00CE81FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0A729E902BD286A500E7434B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -70,11 +90,20 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		0A5225FE2BD47F2A00CE81FE /* PaystackAssessmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A5225FF2BD47F2A00CE81FE /* PaystackAssessmentTests.swift */,
+			);
+			path = PaystackAssessmentTests;
+			sourceTree = "<group>";
+		};
 		0A729E8A2BD286A500E7434B = {
 			isa = PBXGroup;
 			children = (
 				0A5225ED2BD459EF00CE81FE /* HTTPClient */,
 				0A729E952BD286A500E7434B /* PaystackAssessment */,
+				0A5225FE2BD47F2A00CE81FE /* PaystackAssessmentTests */,
 				0A729E942BD286A500E7434B /* Products */,
 				0A5225EF2BD45A0E00CE81FE /* Frameworks */,
 			);
@@ -84,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				0A729E932BD286A500E7434B /* PaystackAssessment.app */,
+				0A5225FD2BD47F2A00CE81FE /* PaystackAssessmentTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +180,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0A5225FC2BD47F2A00CE81FE /* PaystackAssessmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A5226032BD47F2A00CE81FE /* Build configuration list for PBXNativeTarget "PaystackAssessmentTests" */;
+			buildPhases = (
+				0A5225F92BD47F2A00CE81FE /* Sources */,
+				0A5225FA2BD47F2A00CE81FE /* Frameworks */,
+				0A5225FB2BD47F2A00CE81FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A5226022BD47F2A00CE81FE /* PBXTargetDependency */,
+			);
+			name = PaystackAssessmentTests;
+			productName = PaystackAssessmentTests;
+			productReference = 0A5225FD2BD47F2A00CE81FE /* PaystackAssessmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0A729E922BD286A500E7434B /* PaystackAssessment */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A729EA12BD286A600E7434B /* Build configuration list for PBXNativeTarget "PaystackAssessment" */;
@@ -180,6 +228,10 @@
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					0A5225FC2BD47F2A00CE81FE = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 0A729E922BD286A500E7434B;
+					};
 					0A729E922BD286A500E7434B = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -201,11 +253,19 @@
 			projectRoot = "";
 			targets = (
 				0A729E922BD286A500E7434B /* PaystackAssessment */,
+				0A5225FC2BD47F2A00CE81FE /* PaystackAssessmentTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0A5225FB2BD47F2A00CE81FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0A729E912BD286A500E7434B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,6 +279,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0A5225F92BD47F2A00CE81FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5226002BD47F2A00CE81FE /* PaystackAssessmentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0A729E8F2BD286A500E7434B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,7 +307,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0A5226022BD47F2A00CE81FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A729E922BD286A500E7434B /* PaystackAssessment */;
+			targetProxy = 0A5226012BD47F2A00CE81FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0A5226042BD47F2A00CE81FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J8A5ZAM5GV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oluwatobiomotayo.PaystackAssessmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaystackAssessment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PaystackAssessment";
+			};
+			name = Debug;
+		};
+		0A5226052BD47F2A00CE81FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J8A5ZAM5GV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oluwatobiomotayo.PaystackAssessmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaystackAssessment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PaystackAssessment";
+			};
+			name = Release;
+		};
 		0A729E9F2BD286A600E7434B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -428,6 +540,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0A5226032BD47F2A00CE81FE /* Build configuration list for PBXNativeTarget "PaystackAssessmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A5226042BD47F2A00CE81FE /* Debug */,
+				0A5226052BD47F2A00CE81FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0A729E8E2BD286A500E7434B /* Build configuration list for PBXProject "PaystackAssessment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
