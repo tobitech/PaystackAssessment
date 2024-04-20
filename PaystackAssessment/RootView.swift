@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RootView: View {
 	var body: some View {
-		CharactersView(model: CharactersModel(apiService: MockAPIService()))
+		CharactersView(model: CharactersModel(apiService: LiveAPIService()))
 	}
 }
 

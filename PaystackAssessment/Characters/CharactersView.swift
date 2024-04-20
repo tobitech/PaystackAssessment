@@ -30,16 +30,9 @@ struct CharactersView: View {
 	func CharacterItemView(character: CharacterData) -> some View {
 		HStack {
 			if let imageURL = URL(string: character.image) {
-				AsyncImage(url: imageURL) { image in
-					image
-						.resizable()
-						.frame(width: 40, height: 40)
-						.clipShape(Circle())
-				} placeholder: {
-					Color.gray.opacity(0.3)
-						.frame(width: 40, height: 40)
-						.clipShape(Circle())
-				}
+				URLImage(url: imageURL)
+					.frame(width: 40, height: 40)
+					.clipShape(Circle())
 			}
 			
 			Text(character.name)
