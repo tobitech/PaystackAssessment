@@ -6,6 +6,15 @@ struct CharactersView: View {
 	var body: some View {
 		NavigationStack {
 			ScrollView {
+				SearchBar(
+					text: .init(
+						get: { model.query },
+						set: { model.queryChanged($0) }
+					),
+					placeholder: "Search character by name"
+				)
+				.padding(.horizontal, 8)
+
 				VStack {
 					ForEach(model.filteredCharacters) { character in
 						NavigationLink(value: character) {
@@ -19,11 +28,8 @@ struct CharactersView: View {
 				}
 			}
 			.scrollIndicators(.hidden)
+			.scrollDismissesKeyboard(.interactively)
 			.navigationTitle("Characters")
-			.searchable(text: $model.query, prompt: "Search by name")
-			.onChange(of: model.query, { _, _ in
-				model.filterCharacters()
-			})
 			.alert(item: $model.error, content: { error in
 				Alert(title: Text("Oops"), message: Text(error.message))
 			})
@@ -54,6 +60,10 @@ struct CharactersView: View {
 	}
 }
 
-#Preview {
-	CharactersView(model: CharactersModel(apiService: MockAPIService()))
+#if DEBUG
+struct CharactersView_Previews: PreviewProvider {
+	static var previews: some View {
+		CharactersView(model: CharactersModel(apiService: MockAPIService(characters: [.rick, .gomez])))
+	}
 }
+#endif
