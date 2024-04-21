@@ -27,5 +27,5 @@ jobs:
 
       - name: Build Test
         run: |
-          xcodebuild test -project PaystackAssessment.xcodeproj -scheme PaystackAssessment -destination 'platform=iOS Simulator,name=Any iOS Simulator Device' | xcpretty -s
+          xcodebuild test -project PaystackAssessment.xcodeproj -scheme PaystackAssessment -destination 'platform=iOS Simulator,name=Any iOS Simulator Device,OS=16.2' | xcpretty -s
             
