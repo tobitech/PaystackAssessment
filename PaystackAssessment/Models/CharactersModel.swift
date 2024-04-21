@@ -2,13 +2,13 @@ import Foundation
 
 @MainActor
 class CharactersModel: ObservableObject {
-	var characters: [CharacterData] = []
+	private(set) var characters: [CharacterData] = []
+	private(set) var query: String = ""
 	
-	@Published var filteredCharacters: [CharacterData] = []
+	@Published private(set) var filteredCharacters: [CharacterData] = []
 	@Published var error: AlertData?
-	@Published var query: String = ""
 	
-	let apiService: APIServiceable
+	private let apiService: APIServiceable
 	
 	init(apiService: APIServiceable) {
 		self.apiService = apiService
@@ -28,12 +28,13 @@ class CharactersModel: ObservableObject {
 		}
 	}
 	
-	func filterCharacters() {
-		guard !self.query.isEmpty else {
+	func queryChanged(_ value: String) {
+		self.query = value
+		guard !value.isEmpty else {
 			self.filteredCharacters = self.characters
 			return
 		}
-		let trimmedQuery = self.query.trimmingCharacters(in: .whitespacesAndNewlines)
+		let trimmedQuery = value.trimmingCharacters(in: .whitespacesAndNewlines)
 		self.filteredCharacters = self.characters.filter { $0.name.lowercased().contains(trimmedQuery.lowercased()) }
 	}
 }

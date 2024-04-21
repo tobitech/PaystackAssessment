@@ -19,8 +19,14 @@ struct LiveAPIService: APIServiceable, HTTPClient {
 
 #if DEBUG
 struct MockAPIService: APIServiceable {
+	
+	let characters: [CharacterData]
+	init(characters: [CharacterData]) {
+		self.characters = characters
+	}
+	
 	func getCharacters() async -> Result<CharactersAPIResponse, RequestError> {
-		return .success(CharactersAPIResponse(results: [.rick, .gomez]))
+		return .success(CharactersAPIResponse(results: characters))
 	}
 }
 #endif
