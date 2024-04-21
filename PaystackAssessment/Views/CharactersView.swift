@@ -60,6 +60,10 @@ struct CharactersView: View {
 	}
 }
 
-#Preview {
-	CharactersView(model: CharactersModel(apiService: MockAPIService(characters: [.rick, .gomez])))
+#if DEBUG
+struct CharactersView_Previews: PreviewProvider {
+	static var previews: some View {
+		CharactersView(model: CharactersModel(apiService: MockAPIService(characters: [.rick, .gomez])))
+	}
 }
+#endif

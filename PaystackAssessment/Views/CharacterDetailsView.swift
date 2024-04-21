@@ -43,6 +43,10 @@ struct CharacterDetailsView: View {
 	}
 }
 
-#Preview {
-	CharacterDetailsView(character: .gomez)
+#if DEBUG
+struct CharacterDetailsView_Previews: PreviewProvider {
+	static var previews: some View {
+		CharacterDetailsView(character: .gomez)
+	}
 }
+#endif

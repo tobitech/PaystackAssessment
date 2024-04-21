@@ -13,6 +13,10 @@ struct RootView: View {
 	}
 }
 
-#Preview {
-	RootView()
+#if DEBUG
+struct RootView_Previews: PreviewProvider {
+	static var previews: some View {
+		RootView()
+	}
 }
+#endif
