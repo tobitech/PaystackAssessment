@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Selecting Xcode Version
-        run: sudo xcode-select -switch /Applications/Xcode_14.2.app
+        run: sudo xcode-select -s '/Applications/Xcode_14.3.1.app/Contents/Developer'
 
       - name: Running Xcode version
         run: /usr/bin/xcodebuild -version
@@ -27,5 +27,5 @@ jobs:
 
       - name: Build Test
         run: |
-          xcodebuild test -project PaystackAssessment.xcodeproj -scheme PaystackAssessment -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' | xcpretty -s
+          xcodebuild test -project PaystackAssessment.xcodeproj -scheme PaystackAssessment -destination 'platform=iphonesimulator,OS=16.4,name=iPhone 14 Pro' -enableCodeCoverage YES | xcpretty -s
             
