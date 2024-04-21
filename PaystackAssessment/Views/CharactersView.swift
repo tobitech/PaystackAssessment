@@ -6,6 +6,8 @@ struct CharactersView: View {
 	var body: some View {
 		NavigationStack {
 			ScrollView {
+				SearchBar(text: $model.query, placeholder: "Search character by name")
+					.padding(.horizontal, 8)
 				VStack {
 					ForEach(model.filteredCharacters) { character in
 						NavigationLink(value: character) {
@@ -19,8 +21,8 @@ struct CharactersView: View {
 				}
 			}
 			.scrollIndicators(.hidden)
+			.scrollDismissesKeyboard(.interactively)
 			.navigationTitle("Characters")
-			.searchable(text: $model.query, prompt: "Search by name")
 			.onChange(of: model.query, { _, _ in
 				model.filterCharacters()
 			})
