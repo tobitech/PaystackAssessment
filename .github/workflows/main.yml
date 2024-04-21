@@ -18,7 +18,7 @@ jobs:
       - name: Selecting Xcode Version
         run: sudo xcode-select -switch /Applications/Xcode_14.2.app
 
-      - name: Running Xcode version Is?
+      - name: Running Xcode version
         run: /usr/bin/xcodebuild -version
 
       - name: Build Cleanup
@@ -27,5 +27,5 @@ jobs:
 
       - name: Build Test
         run: |
-          xcodebuild test -project PaystackAssessment.xcodeproj -scheme PaystackAssessment -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' | xcpretty -s
+          xcodebuild test -project PaystackAssessment.xcodeproj -scheme PaystackAssessment -destination 'platform=iOS   Simulator,name=iPhone 14,OS=16.2' | xcpretty -s
             

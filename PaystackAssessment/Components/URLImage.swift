@@ -1,21 +1,38 @@
 import SwiftUI
 
-struct URLImage: UIViewRepresentable {
+struct URLImage: View {
 	let url: URL
+	let size: CGSize
 	
-	init(url: URL) {
+	@StateObject private var imageLoader = ImageLoader()
+	
+	init(url: URL, size: CGSize) {
 		self.url = url
+		self.size = size
 	}
 	
-	func makeUIView(context: Context) -> CacheImageView {
-		let imageView = CacheImageView(frame: CGRect(origin: .zero, size: .init(width: 40, height: 40)))
-		imageView.contentMode = .scaleAspectFit
-		imageView.backgroundColor = .gray.withAlphaComponent(0.3)
-		imageView.loadImage(url: url)
-		return imageView
+	var body: some View {
+		VStack {
+			if let uiImage = imageLoader.uiImage {
+				Image(uiImage: uiImage)
+					.resizable()
+					.aspectRatio(contentMode: .fit)
+					.frame(width: size.width, height: size.height)
+			} else {
+				Color.gray.opacity(0.3)
+					.frame(width: size.width, height: size.height)
+			}
+		}
+		.task {
+			await downloadImage()
+		}
 	}
 	
-	func updateUIView(_ uiView: CacheImageView, context: Context) {
-		uiView.loadImage(url: url)
+	private func downloadImage() async {
+		do {
+			try await imageLoader.fetchImage(url)
+		} catch {
+			print(error.localizedDescription)
+		}
 	}
 }
